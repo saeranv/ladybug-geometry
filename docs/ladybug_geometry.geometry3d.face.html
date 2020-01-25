@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ladybug_geometry.geometry3d.face module &#8212; ladybug geometry  documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ladybug_geometry.geometry3d.line module" href="ladybug_geometry.geometry3d.line.html" />
+    <link rel="prev" title="ladybug_geometry.geometry3d.cone module" href="ladybug_geometry.geometry3d.cone.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          ladybug geometry</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry2d.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.arc.html">ladybug_geometry.geometry2d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.line.html">ladybug_geometry.geometry2d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.mesh.html">ladybug_geometry.geometry2d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.pointvector.html">ladybug_geometry.geometry2d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.polygon.html">ladybug_geometry.geometry2d.polygon module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.ray.html">ladybug_geometry.geometry2d.ray module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry2d.html#module-ladybug_geometry.geometry2d">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.sphere.html">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.intersection2d.html">ladybug_geometry.intersection2d module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.intersection3d.html">ladybug_geometry.intersection3d module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.sphere.html">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="ladybug_geometry.geometry3d.cone.html" title="Previous Chapter: ladybug_geometry.geometry3d.cone module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ladybug_geome...</span>
+    </a>
+  </li>
+  <li>
+    <a href="ladybug_geometry.geometry3d.line.html" title="Next Chapter: ladybug_geometry.geometry3d.line module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ladybug_geome... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/ladybug_geometry.geometry3d.face.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.sphere.html">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <div class="section" id="module-ladybug_geometry.geometry3d.face">
+<span id="ladybug-geometry-geometry3d-face-module"></span><h1>ladybug_geometry.geometry3d.face module<a class="headerlink" href="#module-ladybug_geometry.geometry3d.face" title="Permalink to this headline">¶</a></h1>
+<p>Planar Face in 3D Space</p>
+<dl class="class">
+<dt id="ladybug_geometry.geometry3d.face.Face3D">
+<em class="property">class </em><code class="descclassname">ladybug_geometry.geometry3d.face.</code><code class="descname">Face3D</code><span class="sig-paren">(</span><em>boundary</em>, <em>plane=None</em>, <em>holes=None</em>, <em>enforce_right_hand=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ladybug_geometry.geometry3d._2d.Base2DIn3D</span></code></p>
+<p>Planar Face in 3D space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>boundary</strong> – A list or tuple of Point3D objects representing the outer
+boundary vertices of the face.</li>
+<li><strong>plane</strong> – A Plane object indicating the plane in which the face exists.
+If None, the Plane normal will automatically be calculated by
+analyzing the input vertices and the origin of the plane will be
+the first vertex of the input vertices. Default: None.</li>
+<li><strong>holes</strong> – Optional list of lists with one list for each hole in the face.
+Each hole should be a list of at least 3 Point3D objects.
+If None, it will be assumed that there are no holes in the face.
+The boundary and holes are stored as separate lists of Point3Ds on the
+<cite>boundary</cite> and <cite>holes</cite> properties of this object. However, the
+<cite>vertices</cite> property will always contain all vertices across the shape.
+For a Face3D that has holes, it will trace out a single shape that
+turns inwards from the boundary to cut out the holes.</li>
+<li><strong>enforce_right_hand</strong> – Boolean to note whether a check should be run to
+ensure that input vertices are counterclockwise within the input plane,
+thereby enforcing the right-hand rule. By default, this is True
+and ensures that all Face3D objects adhere to the right-hand rule.
+It is recommended that this only be set to False in cases where you
+are certain that the input vertices are counter-clockwise
+within the input plane and you would like to avoid the extra
+unnecessary check.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd><ul class="first last simple">
+<li>vertices</li>
+<li>plane</li>
+<li>boundary</li>
+<li>holes</li>
+<li>polygon2d</li>
+<li>boundary_polygon2d</li>
+<li>hole_polygon2d</li>
+<li>triangulated_mesh2d</li>
+<li>triangulated_mesh3d</li>
+<li>boundary_segments</li>
+<li>hole_segments</li>
+<li>normal</li>
+<li>min</li>
+<li>max</li>
+<li>center</li>
+<li>perimeter</li>
+<li>area</li>
+<li>centroid</li>
+<li>is_clockwise</li>
+<li>is_convex</li>
+<li>is_self_intersecting</li>
+<li>is_valid</li>
+<li>has_holes</li>
+<li>upper_left_counter_clockwise_vertices</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.check_planar">
+<code class="descname">check_planar</code><span class="sig-paren">(</span><em>tolerance</em>, <em>raise_exception=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.check_planar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.check_planar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that all of the face’s vertices lie within the face’s plane.</p>
+<p>This check is not done by default when creating the face since
+it is assumed that there is likely a check for planarity before the face
+is created (ie. in CAD software where the face likely originates from).
+This method is intended for quality control checking when the origin of
+face geometry is unkown or is known to come from a place where no
+planarity check was performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tolerance</strong> – The minimum distance between a given vertex and a the
+face’s plane at which the vertex is said to lie in the plane.</li>
+<li><strong>raise_exception</strong> – Boolean to note whether an exception should be raised
+if a vertex does not lie within the face’s plane. If True, an
+exception message will be given in such cases, which notes the non-planar
+vertex and its distance from the plane. If False, this method will
+simply return a False boolean if a vertex is found that is out
+of plane. Default is True to raise an exception.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if planar within the tolerance. False if not planar.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.countour_by_distance_between">
+<code class="descname">countour_by_distance_between</code><span class="sig-paren">(</span><em>distance</em>, <em>direction_vector=Vector2D (0.00</em>, <em>1.00)</em>, <em>flip_side=False</em>, <em>tolerance=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.countour_by_distance_between"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.countour_by_distance_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of LineSegment3D objects contouring the face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>distance</strong> – A number for the distance between each contour.</li>
+<li><strong>direction_vector</strong> – A Vector2D for the direction along which contours
+are generated. This 2D vector will be interpreted into a 3D vector
+within the plane of this Face. (0, 1) will usually generate
+horizontal contours in 3D space, (1, 0) will generate vertical
+contours, and (1, 1) will generate diagonal contours. Default: (0, 1).</li>
+<li><strong>flip_side</strong> – Boolean to note whether the side the contours start from
+should be flipped. Default is False to have contours on top or right.
+Setting to True will start contours on the bottom or left.</li>
+<li><strong>tolerance</strong> – An optional value to remove any contours with a length less
+than the tolerance. Default is 0, which will include all contours
+no matter how small.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.countour_by_number">
+<code class="descname">countour_by_number</code><span class="sig-paren">(</span><em>contour_count</em>, <em>direction_vector=Vector2D (0.00</em>, <em>1.00)</em>, <em>flip_side=False</em>, <em>tolerance=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.countour_by_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.countour_by_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of LineSegment3D objects contouring the face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>contour_count</strong> – A positive integer for the number of contours
+to generate over the face.</li>
+<li><strong>direction_vector</strong> – A Vector2D for the direction along which contours
+are generated. This 2D vector will be interpreted into a 3D vector
+within the plane of this Face. (0, 1) will usually generate
+horizontal contours in 3D space, (1, 0) will generate vertical
+contours, and (1, 1) will generate diagonal contours. Default: (0, 1).</li>
+<li><strong>flip_side</strong> – Boolean to note whether the side the contours start from
+should be flipped. Default is False to have contours on top or right.
+Setting to True will start contours on the bottom or left.</li>
+<li><strong>tolerance</strong> – An optional value to remove any contours with a length less
+than the tolerance. Default is 0, which will include all contours
+no matter how small.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.countour_fins_by_distance_between">
+<code class="descname">countour_fins_by_distance_between</code><span class="sig-paren">(</span><em>distance</em>, <em>depth</em>, <em>offset=0</em>, <em>angle=0</em>, <em>contour_vector=Vector2D (0.00</em>, <em>1.00)</em>, <em>flip_side=False</em>, <em>tolerance=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.countour_fins_by_distance_between"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.countour_fins_by_distance_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of Fac3D objects over this face (like louvers or fins).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>distance</strong> – A number for the approximate distance between each contour.</li>
+<li><strong>depth</strong> – A number for the depth to extrude the fins.</li>
+<li><strong>offset</strong> – A number for the distance to offset fins from this face.
+Default is 0 for no offset.</li>
+<li><strong>angle</strong> – A number for the for an angle to rotate the fins in radians.
+Default is 0 for no rotation.</li>
+<li><strong>contour_vector</strong> – A Vector2D for the direction along which contours
+are generated. This 2D vector will be interpreted into a 3D vector
+within the plane of this Face. (0, 1) will usually generate
+horizontal contours in 3D space, (1, 0) will generate vertical
+contours, and (1, 1) will generate diagonal contours. Default: (0, 1).</li>
+<li><strong>flip_side</strong> – Boolean to note whether the side the fins start from
+should be flipped. Default is False to have contours on top or right.
+Setting to True will start contours on the bottom or left.</li>
+<li><strong>tolerance</strong> – An optional value to remove any contours with a length less
+than the tolerance. Default is 0, which will include all contour fins
+no matter how small.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.countour_fins_by_number">
+<code class="descname">countour_fins_by_number</code><span class="sig-paren">(</span><em>fin_count</em>, <em>depth</em>, <em>offset=0</em>, <em>angle=0</em>, <em>contour_vector=Vector2D (0.00</em>, <em>1.00)</em>, <em>flip_side=False</em>, <em>tolerance=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.countour_fins_by_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.countour_fins_by_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of Fac3D objects over this face (like louvers or fins).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fin_count</strong> – A positive integer for the number of fins to generate.</li>
+<li><strong>depth</strong> – A number for the depth to extrude the fins.</li>
+<li><strong>offset</strong> – A number for the distance to offset fins from this face.
+Default is 0 for no offset.</li>
+<li><strong>angle</strong> – A number for the for an angle to rotate the fins in radians.
+Default is 0 for no rotation.</li>
+<li><strong>contour_vector</strong> – A Vector2D for the direction along which contours
+are generated. This 2D vector will be interpreted into a 3D vector
+within the plane of this Face. (0, 1) will usually generate
+horizontal contours in 3D space, (1, 0) will generate vertical
+contours, and (1, 1) will generate diagonal contours. Default: (0, 1).</li>
+<li><strong>flip_side</strong> – Boolean to note whether the side the fins start from
+should be flipped. Default is False to have contours on top or right.
+Setting to True will start contours on the bottom or left.</li>
+<li><strong>tolerance</strong> – An optional value to remove any contours with a length less
+than the tolerance. Default is 0, which will include all contour fins
+no matter how small.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.extract_rectangle">
+<code class="descname">extract_rectangle</code><span class="sig-paren">(</span><em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.extract_rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.extract_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract top and bottom line segments of a rectangle within this Face.</p>
+<p>This method will only return geometry if:</p>
+<ol class="arabic simple">
+<li>There are no holes in the face.</li>
+<li>The face is not parallel to the World XY plane.</li>
+<li>There are two parallel edges to this face, which are either
+oriented horizontally or vertically.</li>
+<li>There must be enough overlap between these edges for a rectangle
+to be drawn between them.</li>
+</ol>
+<p>If this Face does not satisfy this criteria, None will be returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tolerance</strong> – The maximum difference between point values for them to be
+considered a part of a rectangle.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A tuple with three elements<ul class="simple">
+<li>bottom_edge: A LineSegment3D representing the bottom of the rectangle.</li>
+<li>top_edge: A LineSegment3D representing the top of the rectangle.</li>
+<li>other_faces:
+A list of Face3D objects for the parts of this face not
+included in the rectangle. The length of this list will be between
+0 (if this face is already rectangular) and 2 (if there are non-
+rectangular geometries on either side of the rectangle.)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.flip">
+<code class="descname">flip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.flip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a face with a flipped direction from this one.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Face3D from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – A python dictionary in the following format</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Face3D&quot;</span><span class="p">,</span>
+<span class="s2">&quot;boundary&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span>
+<span class="s2">&quot;plane&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;o&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)},</span>
+<span class="s2">&quot;holes&quot;</span><span class="p">:</span> <span class="p">[[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.from_extrusion">
+<em class="property">classmethod </em><code class="descname">from_extrusion</code><span class="sig-paren">(</span><em>line_segment</em>, <em>extrusion_vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.from_extrusion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.from_extrusion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Face3D by extruding a line segment.</p>
+<p>Initializing a face this way has the added benefit of having its
+properties quickly computed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>line_segment</strong> – A LineSegment3D to be extruded.</li>
+<li><strong>extrusion_vector</strong> – A vector denoting the direction and distance to
+extrude the line segment.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.from_punched_geometry">
+<em class="property">classmethod </em><code class="descname">from_punched_geometry</code><span class="sig-paren">(</span><em>base_face</em>, <em>sub_faces</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.from_punched_geometry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.from_punched_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a face with holes punched in it from sub-faces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>base_face</strong> – A Face3D that acts as a parent to the sub_faces, completely
+encircling them.</li>
+<li><strong>sub_faces</strong> – A list of Face3D objects that will be punched into the
+base_face. These faces must lie completely within the base_face
+for the result to be valid. The is_sub_face() method can be
+used to check sub_faces before they are input here.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.from_rectangle">
+<em class="property">classmethod </em><code class="descname">from_rectangle</code><span class="sig-paren">(</span><em>base</em>, <em>height</em>, <em>base_plane=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.from_rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.from_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Face3D from rectangle parameters (base + height) and a base plane.</p>
+<p>Initializing a face this way has the added benefit of having its
+properties quickly computed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>base</strong> – A number indicating the length of the base of the rectangle.</li>
+<li><strong>height</strong> – A number indicating the length of the height of the rectangle.</li>
+<li><strong>base_plane</strong> – A Plane object in which the rectangle will be created.
+The origin of this plane will be the lower left corner of the
+rectangle and the X and Y axes will form the sides.
+Default is the world XY plane.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.from_regular_polygon">
+<em class="property">classmethod </em><code class="descname">from_regular_polygon</code><span class="sig-paren">(</span><em>side_count</em>, <em>radius=1</em>, <em>base_plane=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.from_regular_polygon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.from_regular_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Face3D from regular polygon parameters and a base_plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>side_count</strong> – An integer for the number of sides on the regular
+polgygon. This number must be greater than 2.</li>
+<li><strong>radius</strong> – A number indicating the distance from the polygon’s center
+where the vertices of the polygon will lie.
+The default is set to 1.</li>
+<li><strong>base_plane</strong> – A Plane object for the plane in which the face exists.
+The origin of this plane will be used as the center of the polygon.
+If None, the default will be the WorldXY plane.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.get_left_right_vertical_edges">
+<code class="descname">get_left_right_vertical_edges</code><span class="sig-paren">(</span><em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.get_left_right_vertical_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.get_left_right_vertical_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get left and right vertical edges of this Face if they exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tolerance</strong> – The maximum difference between the x any y values of the start
+and end coordinates at which an edge is considered vertical.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(left_edge, right_edge) with each as LineSegment3D if they exist. Left in
+this case is defined as the edge with the lower X coordinates.
+Result will be None if vertical edges do not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.get_mesh_grid">
+<code class="descname">get_mesh_grid</code><span class="sig-paren">(</span><em>x_dim</em>, <em>y_dim=None</em>, <em>offset=None</em>, <em>flip=False</em>, <em>generate_centroids=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.get_mesh_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.get_mesh_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a gridded Mesh3D over this face.</p>
+<p>This method generates a mesh grid over the domain of the face
+and then removes any vertices that do not lie within it.</p>
+<p>Note that the x_dim and y_dim refer to dimensions within the X and Y
+coordinate system of this faces’s plane. So rotating this plane will
+result in rotated grid cells.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x_dim</strong> – The x dimension of the grid cells as a number.</li>
+<li><strong>y_dim</strong> – The y dimension of the grid cells as a number. Default is None,
+which will assume the same cell dimension for y as is set for x.</li>
+<li><strong>offset</strong> – A number for how far to offset the grid from the base face.
+Default is None, which will not offset the grid at all.</li>
+<li><strong>flip</strong> – Set to True to have the mesh normals reversed from the direction
+of this face and to have the offset input move the mesh in the
+opposite direction from this face’s normal.</li>
+<li><strong>generate_centroids</strong> – Set to True to have the face centroids generated
+alongside the grid of vertices, which is much faster than having
+them generated upon request as they typically are. However, if you
+have no need for the face centroids, you would save time and memory
+by setting this to False. Default is True.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.get_top_bottom_horizontal_edges">
+<code class="descname">get_top_bottom_horizontal_edges</code><span class="sig-paren">(</span><em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.get_top_bottom_horizontal_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.get_top_bottom_horizontal_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get top and bottom horizontal edges of this Face if they exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tolerance</strong> – The maximum difference between the z values of the start and
+end coordinates at which an edge is considered horizontal.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(bottom_edge, top_edge) with each as LineSegment3D if they exist.
+None if they do not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.intersect_line_ray">
+<code class="descname">intersect_line_ray</code><span class="sig-paren">(</span><em>line_ray</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.intersect_line_ray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.intersect_line_ray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the intersection between this face and the input Line3D or Ray3D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line_ray</strong> – A Line3D or Ray3D object for which intersection will be computed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Point3D for the intersection. Will be None if no intersection exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.intersect_plane">
+<code class="descname">intersect_plane</code><span class="sig-paren">(</span><em>plane</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.intersect_plane"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.intersect_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the intersection between this face and the input plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plane</strong> – A Plane object for which intersection will be computed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of LineSegment3D objects for the intersection.
+Will be None if no intersection exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_centered_adjacent">
+<code class="descname">is_centered_adjacent</code><span class="sig-paren">(</span><em>face</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.is_centered_adjacent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_centered_adjacent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a given face is centered adjacent with this Face.</p>
+<p>Centered adjacency is definied as sharing the same center point as this face,
+sharing the same area, and being next to one another to within the tolerance.</p>
+<p>This is useful for identifying matching surfaces when you want to quickly
+solve for adjacency and you are not concerned about false positives in cases
+where one face does not perfectly match the other in terms of vertices.
+This means it is good enough for cases where users know how to set up their
+model correctly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>face</strong> – Another face for which centered adjacency will be tested.</li>
+<li><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+centers at which they can be considered centered adjacent.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if centered adjacent. False if not centered adjacent.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_geometrically_equivalent">
+<code class="descname">is_geometrically_equivalent</code><span class="sig-paren">(</span><em>face</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.is_geometrically_equivalent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_geometrically_equivalent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a given face is geometrically equivalent to this Face.</p>
+<p>Geometrical equivalence is definied as being coplananar with this face,
+having the same number of vertices, and having each vertex map-able between
+the faces. Clockwise relationships do not have to match nor does the normal
+direction of the face.  However, all other properties must be matching to
+within the input tolerance.</p>
+<p>This is useful for identifying matching surfaces when solving for adjacency
+and you need to ensure that two faces match perfectly in their area and vertices.
+Note that you may also want to use the remove_colinear_vertices() method
+on input faces before using this method in order to count faces with the
+same non-colinear vertices as geometrically equivalent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>face</strong> – Another face for which geometric equivalency will be tested.</li>
+<li><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+vertices at which they can be considered geometrically equivalent.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if geometrically equivalent. False if not geometrically equivalent.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_sub_face">
+<code class="descname">is_sub_face</code><span class="sig-paren">(</span><em>face</em>, <em>tolerance</em>, <em>angle_tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.is_sub_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_sub_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a given face is a sub-face of this face.</p>
+<p>Sub-faces will lie in the same plane as this one and have all of their
+vertices completely within the boundary of this face.</p>
+<p>This is useful for identifying whether a given sub-face (ie. a window or door)
+can be assigned as a child to this face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>face</strong> – Another face for which sub-face equivalency will be tested.</li>
+<li><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+vertices at which they can be considered equivalent.</li>
+<li><strong>angle_tolerance</strong> – The max angle in radians that the plane normals can
+differ from one another in order for them to be considered coplanar.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if it is a possibe sub-face. False if it is not a valid sub-face.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>moving_vec</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a face that has been moved along a vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>moving_vec</strong> – A Vector3D with the direction and distance to move the face.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.project_point">
+<code class="descname">project_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.project_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.project_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project a Point3D onto this face.</p>
+<p>Note that this method does a check to see if the point can be projected to
+within this face’s boundary. If all that is needed is a point projected
+into the plane of this face, the Plane.project_point() method should be
+used with this face’s plane property.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> – A Point3D object to project.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Point3D for the point projected onto this face. Will be None if the
+point cannot be projected to within the boundary of the face.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.reflect">
+<code class="descname">reflect</code><span class="sig-paren">(</span><em>normal</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.reflect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.reflect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a face reflected across a plane with the input normal vector and origin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>normal</strong> – A Vector3D representing the normal vector for the plane across
+which the face will be reflected. THIS VECTOR MUST BE NORMALIZED.</li>
+<li><strong>origin</strong> – A Point3D representing the origin from which to reflect.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.remove_colinear_vertices">
+<code class="descname">remove_colinear_vertices</code><span class="sig-paren">(</span><em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.remove_colinear_vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.remove_colinear_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a version of this face without colinear or duplicate vertices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tolerance</strong> – The minimum distance between a vertex and the boundary segments
+at which point the vertex is considered colinear.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>axis</em>, <em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate a face by a certain angle around an axis and origin.</p>
+<p>Right hand rule applies:
+If axis has a positive orientation, rotation will be clockwise.
+If axis has a negative orientation, rotation will be counterclockwise.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>axis</strong> – A Vector3D axis representing the axis of rotation.</li>
+<li><strong>angle</strong> – An angle for rotation in radians.</li>
+<li><strong>origin</strong> – A Point3D for the origin around which the object will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.rotate_xy">
+<code class="descname">rotate_xy</code><span class="sig-paren">(</span><em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.rotate_xy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.rotate_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a face rotated counterclockwise in the world XY plane by a certain angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>angle</strong> – An angle in radians.</li>
+<li><strong>origin</strong> – A Point3D for the origin around which the object will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.scale">
+<code class="descname">scale</code><span class="sig-paren">(</span><em>factor</em>, <em>origin=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale a face by a factor from an origin point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>factor</strong> – A number representing how much the face should be scaled.</li>
+<li><strong>origin</strong> – A Point3D representing the origin from which to scale.
+If None, it will be scaled from the World origin (0, 0, 0).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_dimension_rectangle">
+<code class="descname">sub_faces_by_dimension_rectangle</code><span class="sig-paren">(</span><em>sub_rect_height</em>, <em>sub_rect_width</em>, <em>sill_height</em>, <em>horizontal_separation</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_faces_by_dimension_rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_dimension_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of rectangualr faces within this Face3D.</p>
+<p>Note that this method will only yeild results if there is a rectangle to
+be extracted from this Face3D’s geometry.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sub_rect_height</strong> – A number for the target height of the output rectangles.</li>
+<li><strong>sub_rect_width</strong> – A number for the target width of the output rectangles.</li>
+<li><strong>sill_height</strong> – A number for the target height above the bottom edge of
+the rectangle to start the sub-rectangles. If the sub_rect_height
+is too large for the sill_height to fit within the rectangle,
+the sub_rect_height will take precedence.</li>
+<li><strong>horizontal_separation</strong> – A number for the target separation between
+individual sub-rectangle centerlines.  If this number is larger than
+the parent rectangle base, only one sub-rectangle will be produced.</li>
+<li><strong>tolerance</strong> – The maximum difference between point values for them to be
+considered a part of a rectangle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of Face3D objects for sub faces.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio">
+<code class="descname">sub_faces_by_ratio</code><span class="sig-paren">(</span><em>ratio</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_faces_by_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of faces with a combined area equal to the ratio times this face area.</p>
+<p>All sub faces will lie inside the boundaries of this face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ratio</strong> – A number between 0 and 1 for the ratio between the area of
+the sub faces and the area of this face.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A list of Face3D objects for sub faces.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio_rectangle">
+<code class="descname">sub_faces_by_ratio_rectangle</code><span class="sig-paren">(</span><em>ratio</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_faces_by_ratio_rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of faces with a combined area equal to the ratio times this face area.</p>
+<p>This function is virtually equivalent to the sub_faces_by_ratio method
+but a check will be performed to see if any rectangles can be pulled out
+of this face’s geometry. This tends to make the result a bit cleaner,
+especially for concave faces that have rectangles (like L-shaped faces).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ratio</strong> – A number between 0 and 1 for the ratio between the area of
+the sub faces and the area of this face.</li>
+<li><strong>tolerance</strong> – The maximum difference between point values for them to be
+considered a part of a rectangle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of Face3D objects for sub faces. If there is a rectangle in this
+shape, the scaled rectangle will be the first item in this list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio_sub_rectangle">
+<code class="descname">sub_faces_by_ratio_sub_rectangle</code><span class="sig-paren">(</span><em>ratio</em>, <em>sub_rect_height</em>, <em>sill_height</em>, <em>horizontal_separation</em>, <em>vertical_separation</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_faces_by_ratio_sub_rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_faces_by_ratio_sub_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of faces with a combined area equal to the ratio times this face area.</p>
+<p>This function is virtually equivalent to the sub_faces_by_ratio_rectangle
+method but any rectangles that are found will be broken down into sub-rectangles
+using the other inputs (sub_rect_height, sill_height, horizontal_separation,
+vertical_separation). This allows for the creation of a wide array of
+rectangular sub-face geometries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ratio</strong> – A number between 0 and 1 for the ratio between the area of
+the sub faces and the area of this face.</li>
+<li><strong>sub_rect_height</strong> – A number for the target height of the output sub-
+rectangles. Note that, if the ratio is too large for the height,
+the ratio will take precedence and the sub-rectangle height will
+be larger than this value.</li>
+<li><strong>sill_height</strong> – A number for the target height above the bottom edge of
+the rectangle to start the sub-rectangles. Note that, if the
+ratio is too large for the height, the ratio will take precedence
+and the sub-rectangle height will be smaller than this value.</li>
+<li><strong>horizontal_separation</strong> – A number for the target separation between
+individual sub-rectangle centerlines.  If this number is larger than
+the parent rectangle base, only one sub-rectangle will be produced.</li>
+<li><strong>vertical_separation</strong> – An optional number to create a single vertical
+separation between top and bottom sub-rectangles. The default is
+0 for no separation.</li>
+<li><strong>tolerance</strong> – The maximum difference between point values for them to be
+considered a part of a rectangle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of Face3D objects for sub faces. If there is a rectangle in this
+shape, the scaled rectangle will be the first item in this list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_rects_from_rect_dimensions">
+<em class="property">static </em><code class="descname">sub_rects_from_rect_dimensions</code><span class="sig-paren">(</span><em>base_plane</em>, <em>parent_base</em>, <em>parent_height</em>, <em>sub_rect_height</em>, <em>sub_rect_width</em>, <em>sill_height</em>, <em>horizontal_separation</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_rects_from_rect_dimensions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_rects_from_rect_dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of rectangular Face3D objects from dimensions and parameters.</p>
+<p>All of the resulting Face3D objects lie within a parent rectangle defined
+by the parent_base, parent_height, and base_plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>base_plane</strong> – A Plane object in which the rectangle exists.
+The origin of this plane will be the lower left corner of the
+rectangle and the X and Y axes will form the sides.
+Default is the world XY plane.</li>
+<li><strong>parent_base</strong> – A number indicating the length of the base of the
+parent rectangle.</li>
+<li><strong>parent_height</strong> – A number indicating the length of the height of the
+parent rectangle.</li>
+<li><strong>sub_rect_height</strong> – A number for the target height of the output rectangles.</li>
+<li><strong>sub_rect_width</strong> – A number for the target width of the output rectangles.</li>
+<li><strong>sill_height</strong> – A number for the target height above the bottom edge of
+the rectangle to start the sub-rectangles. If the sub_rect_height
+is too large for the sill_height to fit within the rectangle,
+the sub_rect_height will take precedence.</li>
+<li><strong>horizontal_separation</strong> – A number for the target separation between
+individual sub-rectangle centerlines.  If this number is larger than
+the parent rectangle base, only one sub-rectangle will be produced.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of Face3D objects for sub faces.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.sub_rects_from_rect_ratio">
+<em class="property">static </em><code class="descname">sub_rects_from_rect_ratio</code><span class="sig-paren">(</span><em>base_plane</em>, <em>parent_base</em>, <em>parent_height</em>, <em>ratio</em>, <em>sub_rect_height</em>, <em>sill_height</em>, <em>horizontal_separation</em>, <em>vertical_separation=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.sub_rects_from_rect_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.sub_rects_from_rect_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of rectangular Face3D objects using an area ratio and parameters.</p>
+<p>All of the resulting Face3D objects lie within a parent rectangle defined
+by the parent_base, parent_height, and base_plane. The combined area of the
+resulting rectangles is equal to the area of the larger rectangle multiplied
+by the input ratio. This method is particularly useful for generating
+rectangular window surfaces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>parent_base</strong> – A number indicating the length of the base of the
+parent rectangle.</li>
+<li><strong>parent_height</strong> – A number indicating the length of the height of the
+parent rectangle.</li>
+<li><strong>ratio</strong> – A number between 0 and 1 for the ratio between the area of
+the sub rectangle faces and the area of this face.</li>
+<li><strong>sub_rect_height</strong> – A number for the target height of the output sub-
+rectangles. Note that, if the ratio is too large for the height,
+the ratio will take precedence and the sub-rectangle height will
+be larger than this value.</li>
+<li><strong>sill_height</strong> – A number for the target height above the bottom edge of
+the rectangle to start the sub-rectangles. Note that, if the
+ratio is too large for the height, the ratio will take precedence
+and the sub-rectangle height will be smaller than this value.</li>
+<li><strong>horizontal_separation</strong> – A number for the target separation between
+individual sub-rectangle centerlines.  If this number is larger than
+the parent rectangle base, only one sub-rectangle will be produced.</li>
+<li><strong>vertical_separation</strong> – An optional number to create a single vertical
+separation between top and bottom sub-rectangles. The default is
+0 for no separation.</li>
+<li><strong>base_plane</strong> – A Plane object in which the rectangle exists.
+The origin of this plane will be the lower left corner of the
+rectangle and the X and Y axes will form the sides.
+Default is the world XY plane.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A list of Face3D objects for sub faces.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>include_plane=True</em>, <em>enforce_upper_left=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/face.html#Face3D.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Face3D as a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>include_plane</strong> – Set to True to include the Face3D plane in the
+dictionary, which will preserve the underlying orientation
+of the face plane. Default True.</li>
+<li><strong>enforce_upper_left</strong> – Set to True to ensure that the boundary vertices all
+start from the upper-left corner. This takes extra time to compute but
+ensures that the vertices in the dictionary are directly usable in an
+EnergyPlus simulations. Default: False.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.area">
+<code class="descname">area</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>The area of the face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.boundary">
+<code class="descname">boundary</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of vertices on the boundary of this face.</p>
+<p>For most Face3D objects, this will be identical to the vertices property.
+However, when the Face3D has holes within it, this property stores
+the outer boundary of the shape.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.boundary_polygon2d">
+<code class="descname">boundary_polygon2d</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.boundary_polygon2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Polygon2D of the face boundary in the 2D space of the face’s plane.</p>
+<p>Note that this does not include any holes in the face. Just the outer boundary.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.boundary_segments">
+<code class="descname">boundary_segments</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.boundary_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of all line segments bordering the face.</p>
+<p>Note that this does not include segments for any holes in the face.
+Just the outer boundary.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.center">
+<code class="descname">center</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point3D for the center of the bounding box around this geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.centroid">
+<code class="descname">centroid</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The centroid of the face as a Point3D (aka. center of mass).</p>
+<p>Note that the centroid is more time consuming to compute than the center
+(or the middle point of the face bounding box). So the center might be
+preferred over the centroid if you just need a rough point for the middle
+of the face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.has_holes">
+<code class="descname">has_holes</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.has_holes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether the face has holes within it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.hole_polygon2d">
+<code class="descname">hole_polygon2d</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.hole_polygon2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Polygon2D for the face holes in the 2D space of the face’s plane.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.hole_segments">
+<code class="descname">hole_segments</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.hole_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple with a tuple of line segments for each hole in the face.</p>
+<p>This will be None if there are no holes in the face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.holes">
+<code class="descname">holes</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.holes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple with one tuple of vertices for each hole within this face.</p>
+<p>This property will be None when the face has no holes in it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_clockwise">
+<code class="descname">is_clockwise</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_clockwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean for whether the face vertices and boundary are in clockwise order.</p>
+<p>Note that all Face3D objects should have counterclockwise vertices (meaning
+that this property should always be False). This property exists largely
+for testing / debugging purposes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_convex">
+<code class="descname">is_convex</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_convex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether the face is convex (True) or non-convex (False).</p>
+<p>Note that any face with holes will be automatically considered non-convex
+since the underlying polygon_2d is always non-convex in this case.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_self_intersecting">
+<code class="descname">is_self_intersecting</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_self_intersecting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether the face has self-intersecting edges.</p>
+<p>Note that this property is relatively computationally intense to obtain and
+most CAD programs forbid all surfaces with self-intersecting edges.
+So this property should only be used in quality control scripts where the
+origin of the geometry is unknown.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.is_valid">
+<code class="descname">is_valid</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether the face is valid (having a non-zero area).</p>
+<p>Note that faces are still considered valid if they have out-of-plane vertices,
+self-intersecting edges, or duplicate/colinear vertices. The check_planar
+method can be used to detect if there are out-of-plane vertices. The
+is_self_intersecting property identifies self-intersecting edges, and the
+remove_colinear_vertices method will remove duplicate/colinear vertices.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.max">
+<code class="descname">max</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point3D for the maximum bounding box vertex around this geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.min">
+<code class="descname">min</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point3D for the minimum bounding box vertex around this geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.normal">
+<code class="descname">normal</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normal vector for the plane in which the face exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.perimeter">
+<code class="descname">perimeter</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The perimeter of the face. This includes the length of holes in the face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.plane">
+<code class="descname">plane</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of all vertices in this face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.polygon2d">
+<code class="descname">polygon2d</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.polygon2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Polygon2D of this face in the 2D space of the face’s plane.</p>
+<p>Note that this is a single polygon object even when there are holes in the
+face since such a polygon can be made by drawing a line from the holes to
+the outer boundary.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.triangulated_mesh2d">
+<code class="descname">triangulated_mesh2d</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.triangulated_mesh2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A triagulated Mesh2D in the 2D space of the face’s plane.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.triangulated_mesh3d">
+<code class="descname">triangulated_mesh3d</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.triangulated_mesh3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A triagulated Mesh3D of this face.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.upper_left_counter_clockwise_boundary">
+<code class="descname">upper_left_counter_clockwise_boundary</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.upper_left_counter_clockwise_boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get this face’s boundary starting from the upper left and moving counterclockwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.upper_left_counter_clockwise_vertices">
+<code class="descname">upper_left_counter_clockwise_vertices</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.upper_left_counter_clockwise_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get this face’s vertices starting from the upper left and moving counterclockwise.</p>
+<p>This is useful for getting the vertices of several faces aligned with the
+same global geometry rules for export to engines like EnergyPlus.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.face.Face3D.vertices">
+<code class="descname">vertices</code><a class="headerlink" href="#ladybug_geometry.geometry3d.face.Face3D.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of all vertices in this face.</p>
+<p>Note that, in the case of a face with holes, some vertices will be repeated
+since this property effectively traces out a single boundary around the
+whole shape, winding inward to cut out the holes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

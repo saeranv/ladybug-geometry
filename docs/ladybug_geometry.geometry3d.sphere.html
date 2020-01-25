@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ladybug_geometry.geometry3d.sphere module &#8212; ladybug geometry  documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ladybug_geometry.intersection2d module" href="ladybug_geometry.intersection2d.html" />
+    <link rel="prev" title="ladybug_geometry.geometry3d.ray module" href="ladybug_geometry.geometry3d.ray.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          ladybug geometry</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry2d.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.arc.html">ladybug_geometry.geometry2d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.line.html">ladybug_geometry.geometry2d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.mesh.html">ladybug_geometry.geometry2d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.pointvector.html">ladybug_geometry.geometry2d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.polygon.html">ladybug_geometry.geometry2d.polygon module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry2d.ray.html">ladybug_geometry.geometry2d.ray module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry2d.html#module-ladybug_geometry.geometry2d">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.face.html">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.intersection2d.html">ladybug_geometry.intersection2d module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.intersection3d.html">ladybug_geometry.intersection3d module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.face.html">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="ladybug_geometry.geometry3d.ray.html" title="Previous Chapter: ladybug_geometry.geometry3d.ray module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ladybug_geome...</span>
+    </a>
+  </li>
+  <li>
+    <a href="ladybug_geometry.intersection2d.html" title="Next Chapter: ladybug_geometry.intersection2d module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ladybug_geome... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/ladybug_geometry.geometry3d.sphere.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ladybug_geometry.html">ladybug_geometry package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ladybug_geometry.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ladybug_geometry.geometry2d.html">ladybug_geometry.geometry2d package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html">ladybug_geometry.geometry3d package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ladybug_geometry.geometry3d.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.arc.html">ladybug_geometry.geometry3d.arc module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.cone.html">ladybug_geometry.geometry3d.cone module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.face.html">ladybug_geometry.geometry3d.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.line.html">ladybug_geometry.geometry3d.line module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.mesh.html">ladybug_geometry.geometry3d.mesh module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.plane.html">ladybug_geometry.geometry3d.plane module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.pointvector.html">ladybug_geometry.geometry3d.pointvector module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.polyface.html">ladybug_geometry.geometry3d.polyface module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ladybug_geometry.geometry3d.ray.html">ladybug_geometry.geometry3d.ray module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">ladybug_geometry.geometry3d.sphere module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="ladybug_geometry.geometry3d.html#module-ladybug_geometry.geometry3d">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ladybug_geometry.html#module-ladybug_geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <div class="section" id="module-ladybug_geometry.geometry3d.sphere">
+<span id="ladybug-geometry-geometry3d-sphere-module"></span><h1>ladybug_geometry.geometry3d.sphere module<a class="headerlink" href="#module-ladybug_geometry.geometry3d.sphere" title="Permalink to this headline">¶</a></h1>
+<p>Sphere3D</p>
+<dl class="class">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D">
+<em class="property">class </em><code class="descclassname">ladybug_geometry.geometry3d.sphere.</code><code class="descname">Sphere3D</code><span class="sig-paren">(</span><em>center</em>, <em>radius</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Sphere3D object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>center</strong> – A Point3D representing the center of the arc.</li>
+<li><strong>radius</strong> – A number representing the radius of the arc.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd><ul class="first last simple">
+<li>center</li>
+<li>radius</li>
+<li>min</li>
+<li>max</li>
+<li>diameter</li>
+<li>circumference</li>
+<li>area</li>
+<li>volume</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Sphere3D from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – A python dictionary in the following format</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Sphere3D&quot;</span>
+<span class="s2">&quot;center&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<span class="s2">&quot;radius&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.intersect_line_ray">
+<code class="descname">intersect_line_ray</code><span class="sig-paren">(</span><em>line_ray</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.intersect_line_ray"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.intersect_line_ray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the intersection between this Sphere3D object and a Ray2D/LineSegment2D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line_ray</strong> – A LineSegment3D or Ray3D that will be extended infinitely
+for intersection.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A LineSegment3D object if a full intersection exists.
+A Point if a tangent intersection exists.
+None if no full intersection exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.intersect_plane">
+<code class="descname">intersect_plane</code><span class="sig-paren">(</span><em>plane</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.intersect_plane"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.intersect_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the intersection of a plane with this Sphere3D object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plane</strong> – A Plane object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Arc3D representing a full circle if it exists.
+None if no full intersection exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>moving_vec</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a sphere that has been moved along a vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>moving_vec</strong> – A Vector3D with the direction and distance to move the shere.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.reflect">
+<code class="descname">reflect</code><span class="sig-paren">(</span><em>normal</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.reflect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.reflect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a sphere reflected across a plane with the input normal vector and origin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>normal</strong> – A Vector3D representing the normal vector for the plane across
+which the arc will be reflected. THIS VECTOR MUST BE NORMALIZED.</li>
+<li><strong>origin</strong> – A Point3D representing the origin from which to reflect.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>axis</em>, <em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate this sphere by a certain angle around an axis and origin.</p>
+<p>Right hand rule applies:
+If axis has a positive orientation, rotation will be clockwise.
+If axis has a negative orientation, rotation will be counterclockwise.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>axis</strong> – A Vector3D axis representing the axis of rotation.</li>
+<li><strong>angle</strong> – An angle for rotation in radians.</li>
+<li><strong>origin</strong> – A Point3D for the origin around which the sphere will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.rotate_xy">
+<code class="descname">rotate_xy</code><span class="sig-paren">(</span><em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.rotate_xy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.rotate_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a sphere that is rotated counterclockwise in the world XY plane by an angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>angle</strong> – An angle for rotation in radians.</li>
+<li><strong>origin</strong> – A Point3D for the origin around which the sphere will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.scale">
+<code class="descname">scale</code><span class="sig-paren">(</span><em>factor</em>, <em>origin=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale a sphere by a factor from an origin point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>factor</strong> – A number representing how much the sphere should be scaled.</li>
+<li><strong>origin</strong> – A Point3D representing the origin from which to scale.
+If None, it will be scaled from the World origin (0, 0, 0).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ladybug_geometry/geometry3d/sphere.html#Sphere3D.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Sphere as a dictionary.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.area">
+<code class="descname">area</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface area of sphere</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.center">
+<code class="descname">center</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center of sphere.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.circumference">
+<code class="descname">circumference</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.circumference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Circumference of sphere</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.diameter">
+<code class="descname">diameter</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.diameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Diameter of sphere</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.max">
+<code class="descname">max</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point3D for the maximum bounding box vertex around this geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.min">
+<code class="descname">min</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Point3D for the minimum bounding box vertex around this geometry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.radius">
+<code class="descname">radius</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius of sphere.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ladybug_geometry.geometry3d.sphere.Sphere3D.volume">
+<code class="descname">volume</code><a class="headerlink" href="#ladybug_geometry.geometry3d.sphere.Sphere3D.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume of sphere</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

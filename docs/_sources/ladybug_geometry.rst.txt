@@ -1,0 +1,26 @@
+ladybug\_geometry package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ladybug_geometry.geometry2d
+    ladybug_geometry.geometry3d
+
+Submodules
+----------
+
+.. toctree::
+
+   ladybug_geometry.intersection2d
+   ladybug_geometry.intersection3d
+
+Module contents
+---------------
+
+.. automodule:: ladybug_geometry
+    :members:
+    :undoc-members:
+    :show-inheritance:
